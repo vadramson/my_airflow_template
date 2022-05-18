@@ -57,11 +57,15 @@ This starts all the servives
 
 The following page should be display 
 
+
 ![Login Screen](https://github.com/vadramson/my_airflow_template/blob/main/img/airflow_login.png)
 
 
 Enter the username and password as specified in the docker-compose file and login.
+
+
 The following screen should be displayed
+
 
 ![Connected Screen](https://github.com/vadramson/my_airflow_template/blob/main/img/airflow_after_login.png)
 
@@ -76,7 +80,11 @@ Using the command
  	
 	docker ps 
 
-get the desired container ID. For example the webserver container ID as shown in the image below
+get the desired container ID. 
+
+For example the webserver container ID as shown in the image below
+
+
 ![Highlighted Container ID](https://github.com/vadramson/my_airflow_template/blob/main/img/airflow_running_container.png)
 
 The enter the command 
