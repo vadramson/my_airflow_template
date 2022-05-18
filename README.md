@@ -56,11 +56,11 @@ This starts all the servives
 	http://localhost:8080/home
 
 The following page should be display 
-![Login Screen](login.png)
+![Login Screen](https://github.com/vadramson/my_airflow_template/blob/main/img/airflow_login.png)
 
 
 Enter the username and password as specified in the docker-compose file and login. The following screen should be displayed
-!![Connected Screen](connected.png)
+![Connected Screen]([connected.png](https://github.com/vadramson/my_airflow_template/blob/main/img/airflow_after_login.png))
 
 
 #### Restart a running airflow container use the following command
@@ -74,7 +74,7 @@ Using the command
 	docker ps 
 
 get the desired container ID. For example the webserver container ID as shown in the image below
-![Screenshot 2022 05 18 At 17.48.09](/var/folders/vp/c_kgx06n7dq2rtfy8_mhq1dw0000gp/T/TemporaryItems/NSIRD_screencaptureui_aiCGTv/Screenshot%202022-05-18%20at%2017.48.09.png)
+![Highlighted Container ID](https://github.com/vadramson/my_airflow_template/blob/main/img/airflow_running_container.png)
 
 The enter the command 
 
