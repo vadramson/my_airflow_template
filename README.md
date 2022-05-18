@@ -56,10 +56,13 @@ This starts all the servives
 	http://localhost:8080/home
 
 The following page should be display 
+
 ![Login Screen](https://github.com/vadramson/my_airflow_template/blob/main/img/airflow_login.png)
 
 
-Enter the username and password as specified in the docker-compose file and login. The following screen should be displayed
+Enter the username and password as specified in the docker-compose file and login.
+The following screen should be displayed
+
 ![Connected Screen](https://github.com/vadramson/my_airflow_template/blob/main/img/airflow_after_login.png)
 
 
