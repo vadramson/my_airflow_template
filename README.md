@@ -60,7 +60,7 @@ The following page should be display
 
 
 Enter the username and password as specified in the docker-compose file and login. The following screen should be displayed
-![Connected Screen]([connected.png](https://github.com/vadramson/my_airflow_template/blob/main/img/airflow_after_login.png))
+![Connected Screen](https://github.com/vadramson/my_airflow_template/blob/main/img/airflow_after_login.png)
 
 
 #### Restart a running airflow container use the following command
