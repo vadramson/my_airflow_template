@@ -1,3 +1,34 @@
+## What can you do with Airflow?
+
+In Layman’s term, Airflow is an orchestration tool, which means it will trigger tasks on schedule, or when certain events happen (such as an API call or when a sensor operator senses an action). Here are some possible use cases of Airflow:
+
+- **Replace cron jobs:** monitoring cron jobs is hard and tedious. Instead of manually ssh to servers to find out if/why your jobs fail, you can visually see whether your code run or not through the UI and have Airflow notifies you when a job fails.
+
+- Extract data: Airflow, with its many integrations, are used a lot for data engineering tasks. You can write tasks to extract data from your production databases, check data quality, and write the results to your on-cloud data warehouse.
+
+- **Transform data:** you can interface with external services to process your data. For example, you can have a pipeline that submits a job to EMR to process data in S3 with Spark and writes the results to your Redshift data warehouse.
+
+- **Train machine learning models:** you can extract data from a data warehouse, do feature engineering, train a model, and write the results to a NoSQL database to be consumed by other applications.
+
+- **Crawl data from the Internet:** you can write tasks to periodically crawl data from the Internet and write to your database. For instance, you can get daily competitor’s prices or get all comments from your company’s Facebook page.
+
+__The possibilities are endless.__
+
+
+
+**DAGs**
+
+-  DAG is an acronym for a directed acyclic graph, which is a fancy way of describing a graph that is direct and does not form a cycle (a later node never point to an earlier one). Think of DAG in Airflow as a pipeline with nodes (tasks in a DAG, such as “start”, “section-1-task-1”, …) and edges (arrows).
+
+
+**Operator, sensor, task**
+
+- An operator defines what gets done within a task. Some example operators are PythonOperator (execute a python script), BashOperator(run a bash script)…
+
+- A sensor is an operator that waits for a specific event to happen. For instance, a file is written to an S3 bucket, a database row is inserted, or an API call happens.
+
+- A task is simply an instantiated operator. In your dag definition, you can define task dependency with Python code. That is which execute B, C after task A, and D after task B, C.
+
 # my_airflow_template
 This repository contains a starter template for airflow projects
 
