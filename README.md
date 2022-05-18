@@ -56,11 +56,11 @@ This starts all the servives
 	http://localhost:8080/home
 
 The following page should be display 
-![Screenshot 2022 05 18 At 17.48.09](/var/folders/vp/c_kgx06n7dq2rtfy8_mhq1dw0000gp/T/TemporaryItems/NSIRD_screencaptureui_aiCGTv/Screenshot%202022-05-18%20at%2017.48.09.png)
+![Login Screen](login.png)
 
 
 Enter the username and password as specified in the docker-compose file and login. The following screen should be displayed
-![Screenshot 2022 05 18 At 17.48.09](/var/folders/vp/c_kgx06n7dq2rtfy8_mhq1dw0000gp/T/TemporaryItems/NSIRD_screencaptureui_aiCGTv/Screenshot%202022-05-18%20at%2017.48.09.png)
+!![Connected Screen](connected.png)
 
 
 #### Restart a running airflow container use the following command
