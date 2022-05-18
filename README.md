@@ -32,7 +32,7 @@ __The possibilities are endless.__
 # my_airflow_template
 This repository contains a starter template for airflow projects
 
-**Start by downloading the current Airflow .yml file (Here)[https://airflow.apache.org/docs/apache-airflow/stable/docker-compose.yaml]**
+**Start by downloading the current Airflow .yml file [here]([Here](https://airflow.apache.org/docs/apache-airflow/stable/docker-compose.yaml))**
 
 #### Create the needed folders with
 	mkdir dags logs plugins
