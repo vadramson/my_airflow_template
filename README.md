@@ -107,3 +107,19 @@ Then using the following command to get all the available dags
 
 	curl -X GET --user "airflow:airflow" "http://localhost:8080/api/v1/dags"
 
+
+#### Deploying and Accessing Airflow Container on a remote EC2 server
+Enter the following command to install the necessary packages
+
+	sudo apt-get install \
+    apt-transport-https \
+    ca-certificates \
+    curl \
+    gnupg-agent \
+    software-properties-common
+
+After deploying/building the airflow image on a Remote EC2 instance, you can access the airflow server GUI by using the following command (***NB** The EC2 server should accept inbound TCP connections from the desired soruces)
+
+	<remote-server-public-IP>:8080/
+
+
