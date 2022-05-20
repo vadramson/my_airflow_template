@@ -1121,3 +1121,17 @@ TypeError: __init__() got an unexpected keyword argument 'start_time'
 [2022-05-20 14:42:18,049] {logging_mixin.py:115} INFO - [2022-05-20 14:42:18,049] {dag.py:2371} INFO - Sync 1 DAGs
 [2022-05-20 14:42:18,080] {logging_mixin.py:115} INFO - [2022-05-20 14:42:18,080] {dag.py:2919} INFO - Setting next_dagrun for dag_may_20_2022 to 2022-05-20T00:00:00+00:00, run_after=2022-05-21T00:00:00+00:00
 [2022-05-20 14:42:18,217] {processor.py:161} INFO - Processing /opt/airflow/dags/dags.py took 0.222 seconds
+[2022-05-20 14:42:48,441] {processor.py:153} INFO - Started process (PID=1147) to work on /opt/airflow/dags/dags.py
+[2022-05-20 14:42:48,442] {processor.py:641} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2022-05-20 14:42:48,443] {logging_mixin.py:115} INFO - [2022-05-20 14:42:48,443] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2022-05-20 14:42:48,457] {processor.py:651} INFO - DAG(s) dict_keys(['dag_may_20_2022']) retrieved from /opt/airflow/dags/dags.py
+[2022-05-20 14:42:48,485] {logging_mixin.py:115} INFO - [2022-05-20 14:42:48,485] {dag.py:2371} INFO - Sync 1 DAGs
+[2022-05-20 14:42:48,512] {logging_mixin.py:115} INFO - [2022-05-20 14:42:48,511] {dag.py:2919} INFO - Setting next_dagrun for dag_may_20_2022 to 2022-05-20T00:00:00+00:00, run_after=2022-05-21T00:00:00+00:00
+[2022-05-20 14:42:48,523] {processor.py:161} INFO - Processing /opt/airflow/dags/dags.py took 0.085 seconds
+[2022-05-20 14:43:18,777] {processor.py:153} INFO - Started process (PID=1202) to work on /opt/airflow/dags/dags.py
+[2022-05-20 14:43:18,779] {processor.py:641} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2022-05-20 14:43:18,780] {logging_mixin.py:115} INFO - [2022-05-20 14:43:18,780] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2022-05-20 14:43:18,800] {processor.py:651} INFO - DAG(s) dict_keys(['dag_may_20_2022']) retrieved from /opt/airflow/dags/dags.py
+[2022-05-20 14:43:18,833] {logging_mixin.py:115} INFO - [2022-05-20 14:43:18,833] {dag.py:2371} INFO - Sync 1 DAGs
+[2022-05-20 14:43:18,861] {logging_mixin.py:115} INFO - [2022-05-20 14:43:18,860] {dag.py:2919} INFO - Setting next_dagrun for dag_may_20_2022 to 2022-05-20T00:00:00+00:00, run_after=2022-05-21T00:00:00+00:00
+[2022-05-20 14:43:18,871] {processor.py:161} INFO - Processing /opt/airflow/dags/dags.py took 0.100 seconds

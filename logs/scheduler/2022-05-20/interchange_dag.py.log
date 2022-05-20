@@ -177,3 +177,17 @@
 [2022-05-20 14:42:09,195] {logging_mixin.py:115} INFO - [2022-05-20 14:42:09,195] {dag.py:2371} INFO - Sync 1 DAGs
 [2022-05-20 14:42:09,222] {logging_mixin.py:115} INFO - [2022-05-20 14:42:09,222] {dag.py:2919} INFO - Setting next_dagrun for interchange_dag to 2022-05-20T00:00:00+00:00, run_after=2022-05-21T00:00:00+00:00
 [2022-05-20 14:42:09,242] {processor.py:161} INFO - Processing /opt/airflow/dags/interchange_dag.py took 0.260 seconds
+[2022-05-20 14:42:39,413] {processor.py:153} INFO - Started process (PID=1137) to work on /opt/airflow/dags/interchange_dag.py
+[2022-05-20 14:42:39,414] {processor.py:641} INFO - Processing file /opt/airflow/dags/interchange_dag.py for tasks to queue
+[2022-05-20 14:42:39,415] {logging_mixin.py:115} INFO - [2022-05-20 14:42:39,415] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/interchange_dag.py
+[2022-05-20 14:42:39,427] {processor.py:651} INFO - DAG(s) dict_keys(['interchange_dag']) retrieved from /opt/airflow/dags/interchange_dag.py
+[2022-05-20 14:42:39,456] {logging_mixin.py:115} INFO - [2022-05-20 14:42:39,456] {dag.py:2371} INFO - Sync 1 DAGs
+[2022-05-20 14:42:39,480] {logging_mixin.py:115} INFO - [2022-05-20 14:42:39,480] {dag.py:2919} INFO - Setting next_dagrun for interchange_dag to 2022-05-20T00:00:00+00:00, run_after=2022-05-21T00:00:00+00:00
+[2022-05-20 14:42:39,494] {processor.py:161} INFO - Processing /opt/airflow/dags/interchange_dag.py took 0.085 seconds
+[2022-05-20 14:43:09,731] {processor.py:153} INFO - Started process (PID=1201) to work on /opt/airflow/dags/interchange_dag.py
+[2022-05-20 14:43:09,732] {processor.py:641} INFO - Processing file /opt/airflow/dags/interchange_dag.py for tasks to queue
+[2022-05-20 14:43:09,734] {logging_mixin.py:115} INFO - [2022-05-20 14:43:09,733] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/interchange_dag.py
+[2022-05-20 14:43:09,743] {processor.py:651} INFO - DAG(s) dict_keys(['interchange_dag']) retrieved from /opt/airflow/dags/interchange_dag.py
+[2022-05-20 14:43:09,771] {logging_mixin.py:115} INFO - [2022-05-20 14:43:09,771] {dag.py:2371} INFO - Sync 1 DAGs
+[2022-05-20 14:43:09,795] {logging_mixin.py:115} INFO - [2022-05-20 14:43:09,795] {dag.py:2919} INFO - Setting next_dagrun for interchange_dag to 2022-05-20T00:00:00+00:00, run_after=2022-05-21T00:00:00+00:00
+[2022-05-20 14:43:09,809] {processor.py:161} INFO - Processing /opt/airflow/dags/interchange_dag.py took 0.081 seconds
