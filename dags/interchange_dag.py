@@ -1,3 +1,4 @@
+import os
 from airflow import DAG  # Indicates the file is a DAG file
 from airflow.operators.python import PythonOperator, BranchPythonOperator # Imports the needed operator
 from airflow.operators.bash import BashOperator
@@ -17,4 +18,12 @@ catchup=False # Catchup avoids triggering none-trggered DAGs between the start d
 
 
 
-
+runn_command = "./home/talend/talend_share/python_scripts/Interchange_app/run_interchange.sh "
+if os.path.exists(runn_command):
+   t1 = BashOperator(
+        task_id= 'create_file',
+        bash_command=runn_command,
+        dag=dag
+   )
+else:
+    raise Exception("Cannot locate {}".format(runn_command))
