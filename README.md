@@ -123,3 +123,7 @@ After deploying/building the airflow image on a Remote EC2 instance, you can acc
 	<remote-server-public-IP>:8080/
 
 
+#### Locate files in the airflow containder
+
+	docker exec -ti <CONTAINER-ID> /bin/bash
+	docker exec -ti 8417b983be52 /bin/bash

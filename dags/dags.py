@@ -12,9 +12,12 @@ def choose_best_ml_model(ti): # Returns the ID of the next task to be executed
         'tarining_dummy_model_B',
         'tarining_dummy_model_C'
     ]) # Use xcom to share data amongst different tasks
-
-    best_accuracy =  max(accuracies)
     
+    if len(accuracies) == 0:
+        best_accuracy = randint(1, 10)
+    else:
+        best_accuracy =  max(accuracies)
+
     if (best_accuracy > 8):
         return 'accurate'
     return 'inaccurate'
@@ -27,7 +30,7 @@ def train_dummy_model():
 
 
 # Creating a DAG Object using the context manager with
-with DAG("dag_may_20_2022",  # Dag id
+with DAG("ml_pipeline_dag_may_20_2022",  # Dag id
 start_date=datetime(2022, 1, 1,0,0,0), # start date, the 1st of January 2022 --> This DAG will starts triggered on 02/01/2022
 schedule_interval="@daily",  # Cron expression, here it is a preset of Airflow, @daily means once every day at midnight.
 catchup=False # Catchup avoids triggering none-trggered DAGs between the start date and the current date
