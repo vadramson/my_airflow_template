@@ -20,6 +20,7 @@ catchup=False # Catchup avoids triggering none-trggered DAGs between the start d
         #bash_command = "docker run -ti interchange-python-docker "
         #bash_command = "echo Nice to meet you $USER"
         bash_command = cmd_run_py
+        #bash_command = "docker run -ti interchange-python-docker "
     )
 
 

@@ -56,16 +56,19 @@ x-airflow-common:
     AIRFLOW__CELERY__BROKER_URL: redis://:@redis:6379/0
     AIRFLOW__CORE__FERNET_KEY: ''
     AIRFLOW__CORE__DAGS_ARE_PAUSED_AT_CREATION: 'true'
-    AIRFLOW__CORE__LOAD_EXAMPLES: 'true'
+    AIRFLOW__CORE__LOAD_EXAMPLES: 'false'
     AIRFLOW__API__AUTH_BACKENDS: 'airflow.api.auth.backend.basic_auth'
-    AIRFLOW__WEBSERVER__AUTHENTICATE: 'True'
+    AIRFLOW__WEBSERVER__AUTHENTICATE: 'true'
     AIRFLOW__WEBSERVER__AUTH_BACKEND: 'airflow.contrib.auth.backends.password_auth'
+    AIRFLOW__CORE__ENABLE_XCOM_PICKLING: 'true' # "_run_image of the DockerOperator returns now a python string, not a byte string" Ref: https://github.com/apache/airflow/issues/13487
     _PIP_ADDITIONAL_REQUIREMENTS: ${_PIP_ADDITIONAL_REQUIREMENTS:-}
   volumes:
     - ./dags:/opt/airflow/dags
     - ./logs:/opt/airflow/logs
     - ./plugins:/opt/airflow/plugins
-  user: "${AIRFLOW_UID:-50000}:0"
+    - "/var/run/docker.sock:/var/run/docker.sock" # Passing the Docker Deamon as a volume to allow the webserver containers start docker images. Ref: https://stackoverflow.com/q/51342810/7024760
+  #user: "${AIRFLOW_UID:-50000}:0"
+  user: "${AIRFLOW_UID:-50000}:${AIRFLOW_GID:-50000}"
   depends_on:
     &airflow-common-depends-on
     redis:
