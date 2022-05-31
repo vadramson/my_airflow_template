@@ -4,6 +4,8 @@
 
 FROM python:3.10.4-slim-buster
 
+WORKDIR /Users/vadramandisang/Documents/Vadrama/data/Product/Docker-Airflow/Airflow/my_airflow_template/dags/Interchange
+
 USER root
 RUN apt-get update -y \
     && apt-get install -y python3-dev python3-pip build-essential \
@@ -28,7 +30,7 @@ RUN usermod -aG docker airflow
 
 #COPY requirements.txt requirements.txt
 COPY Dockerfile Dockerfile
-COPY interchange_app.py interchange_app.py
+COPY dags/Interchange/interchange_app.py dags/Interchange/interchange_app.py
 
 #RUN pip install -r requirements.txt
 RUN pip3 install pandas
@@ -45,4 +47,5 @@ USER airflow
 #USER airflow
 
 
-CMD ["echo", "Vadrama Says Hi. Lunched from Airflow Docker"]
+# CMD ["echo", "Vadrama Says Hi. Lunched from Airflow Docker"]
+CMD [ "python", "dags/Interchange/interchange_app.py"]
