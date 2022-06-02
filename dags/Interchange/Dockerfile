@@ -47,5 +47,5 @@ USER airflow
 #USER airflow
 
 
-CMD ["echo", "Vadrama Says Hi. Lunched from Airflow Docker"]
+CMD ["echo", "Vadrama Says Hi. Launched from Airflow Docker"]
 # CMD [ "python", "dags/Interchange/interchange_app.py"]

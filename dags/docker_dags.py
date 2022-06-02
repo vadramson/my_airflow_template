@@ -38,7 +38,8 @@ with DAG('docker_operator_demo', default_args=default_args, schedule_interval="5
         container_name='task___command_hello',
         api_version='auto',
         auto_remove=True,
-        command="python /opt/airflow/dags/Interchange/interchange_app.py",
+        #command="python /opt/airflow/dags/Interchange/interchange_app.py",
+        command="docker run -ti docker_image_task"
         docker_url="unix://var/run/docker.sock",
         network_mode="bridge",
         mount_tmp_dir=True, 
@@ -52,7 +53,7 @@ with DAG('docker_operator_demo', default_args=default_args, schedule_interval="5
         container_name='task___command_world',
         api_version='auto',
         auto_remove=True,
-        command="echo I am Running HELLO, I was lunched from an Airflow Container",
+        command="echo I am Running HELLO, I was launched from an Airflow Container",
         docker_url="unix://var/run/docker.sock",
         network_mode="bridge",
         mount_tmp_dir=True, 
