@@ -127,3 +127,14 @@ After deploying/building the airflow image on a Remote EC2 instance, you can acc
 
 	docker exec -ti <CONTAINER-ID> /bin/bash
 	docker exec -ti 8417b983be52 /bin/bash
+
+
+#### Building and Running Docker Images
+
+From within the project's root folder where you have the Dockerfile, enter the following command to build the image
+
+	docker build -t <desire-docker-image-name> .
+
+Enter the following command to run the just created Docker Image
+
+	docker run -ti <desire-docker-image-name> 

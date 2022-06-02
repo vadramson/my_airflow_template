@@ -11,12 +11,12 @@ import re
 ## Connection Credentials
 
 snow_Cred = {
-    'user' : 'Data_Connector',
-    'password' : 'YtFgf7+&9Y%f;:pP',
-    'account': 'og01584.eu-central-1',
-    'warehouse': 'COMPUTE_WH',
-    'database': 'SAS_APPS',
-    'schema': 'MISCELLENEOUS_SAS'
+    'user' : 'user',
+    'password' : 'password',
+    'account': 'account',
+    'warehouse': 'warehouse',
+    'database': 'database',
+    'schema': 'schema'
 }
 
 
