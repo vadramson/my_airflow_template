@@ -60,7 +60,7 @@ with DAG('docker_operator_demo', default_args=default_args, schedule_interval="5
         container_name='task___command_world',
         api_version='auto',
         auto_remove=True,
-        command="echo I am Running HELLO, I was launched from an Airflow Container",
+        #command="echo I am Running HELLO, I was launched from an Airflow Container",
         docker_url="unix://var/run/docker.sock",
         network_mode="bridge",
         mount_tmp_dir=True, 
@@ -70,11 +70,11 @@ with DAG('docker_operator_demo', default_args=default_args, schedule_interval="5
     t3doc = DockerOperator(
         privileged=True,
         task_id='comman_to_run_request_launch',
-        image='request_launch.py',
+        image='python_rquest_app',
         container_name='task___request_launch',
         api_version='auto',
         auto_remove=True,
-        command="python request_launch.py",
+        #command="python request_launch.py",
         docker_url="unix://var/run/docker.sock",
         network_mode="bridge"
         #mount_tmp_dir=True, 
