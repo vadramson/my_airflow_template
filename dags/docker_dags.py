@@ -35,7 +35,7 @@ with DAG('docker_operator_demo', default_args=default_args, schedule_interval="5
 
     tdoc = BashOperator(
         task_id='run_docker_from_BashOperator',
-        command = "docker run -ti python_rquest_app "
+        bash_command = "docker run -ti python_rquest_app "
         )    
         
     t2 = DockerOperator(
