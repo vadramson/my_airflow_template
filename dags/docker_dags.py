@@ -1,5 +1,7 @@
 
 from datetime import datetime, timedelta
+
+from setuptools import Command
 from airflow import DAG
 from airflow.operators.bash_operator import BashOperator
 from airflow.operators.docker_operator import DockerOperator
@@ -39,7 +41,7 @@ with DAG('docker_operator_demo', default_args=default_args, schedule_interval="5
         api_version='auto',
         auto_remove=True,
         #command="python /opt/airflow/dags/Interchange/interchange_app.py",
-        command="docker run -ti docker_image_task"
+        command = "docker run -ti docker_image_task",
         docker_url="unix://var/run/docker.sock",
         network_mode="bridge",
         mount_tmp_dir=True, 
