@@ -32,6 +32,11 @@ with DAG('docker_operator_demo', default_args=default_args, schedule_interval="5
         task_id='print_current_date',
         bash_command='date'
         )
+
+    tdoc = BashOperator(
+        task_id='run_docker_from_BashOperator',
+        command = "docker run -ti python_rquest_app "
+        )    
         
     t2 = DockerOperator(
         privileged=True,
@@ -41,7 +46,7 @@ with DAG('docker_operator_demo', default_args=default_args, schedule_interval="5
         api_version='auto',
         auto_remove=True,
         #command="python /opt/airflow/dags/Interchange/interchange_app.py",
-        command = "docker run -ti docker_image_task",
+        command = "docker run -ti python_rquest_app ",
         docker_url="unix://var/run/docker.sock",
         network_mode="bridge",
         mount_tmp_dir=True, 
