@@ -41,6 +41,14 @@ Start by downloading the current Airflow .yml file **[Here](https://airflow.apac
 	echo -e "AIRFLOW_UID=$(id -u)\nAIRFLOW_GID=0" > .env
 
 
+#### Accessing other Docker containers from within Airflow's Docker Container
+You need to mount the Docker Deamon as a volume to allow the webserver containers to access and interract with other docker images.
+
+To do that add the following to the volumes in the Airflow docker-compose.yml file
+	    - "/var/run/docker.sock:/var/run/docker.sock" # Passing the Docker Deamon as a volume to allow the webserver start other docker images. Ref: https://stackoverflow.com/q/51342810/7024760
+
+
+
 #### initialize the Airflow instance with the airflow service using the command 
 	docker-compose up airflow-init
 This pulls all the images and create all the services listed in the docker-compose file 
