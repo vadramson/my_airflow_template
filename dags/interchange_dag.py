@@ -19,7 +19,7 @@ default_var_args = {
 'retry_delay'           : timedelta(minutes=5)
 }
 
-with DAG('interchange_dag', default_args=default_var_args, schedule_interval="5 * * * *", catchup=False) as dag:
+with DAG('interchange_dag', default_args=default_var_args, schedule_interval="0 23 * * *", catchup=False) as dag:
     start_dag = DummyOperator(
         task_id='start_dag'
         )
