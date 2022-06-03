@@ -1,27 +1,25 @@
+
+from datetime import datetime, timedelta
+
+from setuptools import Command
 from airflow import DAG
 from airflow.operators.bash_operator import BashOperator
 from airflow.operators.docker_operator import DockerOperator
 from airflow.operators.python_operator import BranchPythonOperator
 from airflow.operators.dummy_operator import DummyOperator
 
-
-from datetime import datetime, timedelta
-from setuptools import Command
-
-default_args = {
+default_var_args = {
 'owner'                 : 'airflow',
-'description'           : 'Use of the DockerOperator to run Interchange container',
+'description'           : 'Use of the DockerOperator',
 'depend_on_past'        : False,
-'start_date'            : datetime(2022, 6, 1),
-'email': ['vadrama.ngyibi@mooncard.co', 'victor.sirot@mooncard.co'],
+'start_date'            : datetime(2022, 5, 1),
 'email_on_failure'      : True,
 'email_on_retry'        : False,
 'retries'               : 1,
 'retry_delay'           : timedelta(minutes=5)
 }
 
-# Run everyday at 11 PM -> schedule_interval="0 23 * * *"
-with DAG('interchange_dag_docker', default_args=default_args, schedule_interval="0 23 * * *", catchup=False) as dag:
+with DAG('interchange_dag', default_args=default_var_args, schedule_interval="5 * * * *", catchup=False) as dag:
     start_dag = DummyOperator(
         task_id='start_dag'
         )
@@ -38,6 +36,6 @@ with DAG('interchange_dag_docker', default_args=default_args, schedule_interval=
         network_mode="bridge"
         #mount_tmp_dir=True, 
         #tmp_dir='/tmp/airflow'
-        )
+    )
 
     start_dag >> run_interchange
