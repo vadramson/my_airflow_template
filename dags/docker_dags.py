@@ -8,7 +8,7 @@ from airflow.operators.docker_operator import DockerOperator
 from airflow.operators.python_operator import BranchPythonOperator
 from airflow.operators.dummy_operator import DummyOperator
 
-default_args = {
+default_var_args = {
 'owner'                 : 'airflow',
 'description'           : 'Use of the DockerOperator',
 'depend_on_past'        : False,
@@ -19,7 +19,7 @@ default_args = {
 'retry_delay'           : timedelta(minutes=5)
 }
 
-with DAG('docker_operator_demo', default_args=default_args, schedule_interval="5 * * * *", catchup=False) as dag:
+with DAG('docker_operator_demo', default_args=default_var_args, schedule_interval="5 * * * *", catchup=False) as dag:
     start_dag = DummyOperator(
         task_id='start_dag'
         )

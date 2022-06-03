@@ -1,16 +1,16 @@
-
-from datetime import datetime, timedelta
-
-from setuptools import Command
 from airflow import DAG
 from airflow.operators.bash_operator import BashOperator
 from airflow.operators.docker_operator import DockerOperator
 from airflow.operators.python_operator import BranchPythonOperator
 from airflow.operators.dummy_operator import DummyOperator
 
+
+from datetime import datetime, timedelta
+from setuptools import Command
+
 default_args = {
 'owner'                 : 'airflow',
-'description'           : 'Use of the DockerOperator',
+'description'           : 'Use of the DockerOperator to run Interchange container',
 'depend_on_past'        : False,
 'start_date'            : datetime(2022, 6, 1),
 'email': ['vadrama.ngyibi@mooncard.co', 'victor.sirot@mooncard.co'],
@@ -21,16 +21,16 @@ default_args = {
 }
 
 # Run everyday at 11 PM -> schedule_interval="0 23 * * *"
-with DAG('docker_operator_demo', default_args=default_args, schedule_interval="0 23 * * *", catchup=False) as dag:
+with DAG('interchange_dag_docker', default_args=default_args, schedule_interval="0 23 * * *", catchup=False) as dag:
     start_dag = DummyOperator(
         task_id='start_dag'
         )
 
     run_interchange = DockerOperator(
         privileged=True,
-        task_id='comman_to_run_interchange_docker_image',
+        task_id='command_to_run_interchange_docker_image',
         image='interchange-python-docker',
-        container_name='run_interchange_docker', 
+        container_name='run_interchange-python-docker', 
         api_version='auto',
         auto_remove=True,
         #command="python request_launch.py", # No need to have a command here since interchange-python-docker image already has an Entry point
