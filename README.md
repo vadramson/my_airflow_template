@@ -2,7 +2,7 @@
 
 In Layman’s term, Airflow is an orchestration tool, which means it will trigger tasks on schedule, or when certain events happen (such as an API call or when a sensor operator senses an action). Here are some possible use cases of Airflow:
 
-- **Replace cron jobs:** monitoring cron jobs is hard and tedious. Instead of manually ssh to servers to find out if/why your jobs fail, you can visually see whether your code run or not through the UI and have Airflow notifies you when a job fails.
+- **Replace cron jobs:** monitoring cron jobs is hard and tedious. Instead of manually ssh to servers to find out if/why your jobs fail, you can visually see whether your code run or not through the UI and have Airflow notifying you when a job fails.
 
 - Extract data: Airflow, with its many integrations, are used a lot for data engineering tasks. You can write tasks to extract data from your production databases, check data quality, and write the results to your on-cloud data warehouse.
 
@@ -131,7 +131,7 @@ After deploying/building the airflow image on a Remote EC2 instance, you can acc
 	<remote-server-public-IP>:8080/
 
 
-#### Locate files in the airflow containder
+#### Locate files in the airflow container
 
 	docker exec -ti <CONTAINER-ID> /bin/bash
 	docker exec -ti 8417b983be52 /bin/bash
