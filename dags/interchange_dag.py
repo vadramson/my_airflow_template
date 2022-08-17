@@ -27,7 +27,7 @@ with DAG('interchange_dag', default_args=default_var_args, schedule_interval="0 
     run_interchange = DockerOperator(
         privileged=True,
         task_id='command_to_run_interchange_docker_image',
-        image='interchange-python-docker',
+        image='interchange-python-docker-container',
         container_name='run_interchange-python-docker', 
         api_version='auto',
         auto_remove=True,
