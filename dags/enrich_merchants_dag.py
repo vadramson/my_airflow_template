@@ -19,7 +19,7 @@ default_var_args = {
 'retry_delay'           : timedelta(minutes=5)
 }
 
-with DAG('interchange_dag', default_args=default_var_args, schedule_interval="@weekly", catchup=False) as dag:
+with DAG('enrich_merchant_dag', default_args=default_var_args, schedule_interval="@weekly", catchup=False) as dag:
     start_dag = DummyOperator(
         task_id='starting_up'
         )
