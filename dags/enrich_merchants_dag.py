@@ -12,7 +12,7 @@ default_var_args = {
 'owner'                 : 'airflow',
 'description'           : 'Use of the DockerOperator',
 'depend_on_past'        : False,
-'start_date'            : datetime(2022, 5, 1),
+'start_date'            : datetime(2022, 9, 11),
 'email_on_failure'      : True,
 'email_on_retry'        : False,
 'retries'               : 1,
